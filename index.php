@@ -38,7 +38,7 @@
         background-color: #ffffff;
         position: absolute;
         top: 80px;
-        left: 50px;
+        left: 45px;
         display: flex;
         align-items: center;
         box-shadow: 0px 0px 10px;
