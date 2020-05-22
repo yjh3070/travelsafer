@@ -39,9 +39,9 @@
         position: absolute;
         top: 80px;
         left: 50px;
-        box-shadow: ;
         display: flex;
         align-items: center;
+        box-shadow: 0px 0px 10px gray;
       }
 
       /* 검색하는 input */
