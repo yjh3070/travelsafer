@@ -41,7 +41,7 @@
         left: 45px;
         display: flex;
         align-items: center;
-        box-shadow: 0px 0px 10px;
+        box-shadow: 0px 0px 10px gray;
       }
 
       /* 검색하는 input */
