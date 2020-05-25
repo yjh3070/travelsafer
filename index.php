@@ -5,10 +5,11 @@
     <meta name="viewport" content="initial-scale=1.0">
     <meta charset="utf-8">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-
+    <link rel="stylesheet" href="stylesheet/index.css">
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBW8KU767TtEUPCktqpmGBffaeZKjwSTuw&callback=initMap"
     async defer></script>
-
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <!-- 지도 script -->
     <script>
       var map;
       function initMap() {
@@ -20,10 +21,10 @@
         });
       }
     </script>
-
+    <!-- 지도 style -->
     <style>
-        /* Always set the map height explicitly to define the size of the div
-        * element that contains the map. */
+      /* Always set the map height explicitly to define the size of the div
+      * element that contains the map. */
       #map {
         height: 100%;
       }
@@ -32,51 +33,6 @@
         height: 100%;
         margin: 0;
         padding: 0;
-      }
-      
-      /* 지도 위의 모든 태그들을 감싼 div */
-      #content{
-        position: absolute;
-        z-index: 2;
-        top: 0px;
-        left: 0px;
-      }
-
-      form{
-        display: inline;
-        width: 75%;
-      }
-
-      /* 검색 창 div */
-      .search{
-        width: 274px;
-        height: 50px;
-        border-radius: 25px;
-        background-color: #ffffff;
-        position: absolute;
-        top: 80px;
-        left: 45px;
-        display: flex;
-        align-items: center;
-        box-shadow: 0px 0px 10px gray;
-      }
-
-      /* 검색하는 input */
-      input{
-        border: 0px;
-        height: 40px;
-        width: 100%;
-      }
-
-      input:focus {
-        outline:none;
-      }
-
-      /* 검색 창의 이미지 */
-      .map_flag{
-        margin-left: 10px;
-        margin-right: 10px;
-        width: 8%
       }
     </style>
   </head>
@@ -90,8 +46,16 @@
           <input type="text"></input>
         </form>
       </div>
+      <div id="menu">
+        <ul>
+            <li id="menuBtn"><img src="img/menu.svg" alt=""></li>
+            <a href="" id="ali"><li><img src="img/ticket.svg" alt=""></li></a>
+            <a href=""><li><img src="img/online.svg" alt=""></li></a>
+            <a href=""><li><img src="img/man-avatar.svg" alt=""></li></a>
+        </ul>
+      </div>
     </div>
 	
-    
+    <script src="javascript/menu.js"></script>
   </body>
 </html>
