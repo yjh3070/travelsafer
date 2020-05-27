@@ -1,0 +1,22 @@
+#board.open{
+    visibility: hidden;
+}
+
+#shop.open{
+    visibility: hidden;
+}
+
+#main.open{
+    visibility: hidden;
+}
+
+li{
+    cursor: pointer;
+}
+
+button{
+    border: 0;
+    outline: 0;
+    background-color: #ffffff;
+    cursor: pointer;
+}

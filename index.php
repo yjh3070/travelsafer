@@ -1,12 +1,33 @@
+<?php
+  $menuclick = '';
+?>
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Simple Map</title>
+    <title>Travelsafer</title>
     <meta name="viewport" content="initial-scale=1.0">
     <meta charset="utf-8">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="stylesheet/index.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBW8KU767TtEUPCktqpmGBffaeZKjwSTuw&callback=initMap"
+    async defer></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <!-- 지도 script -->
+    <script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          // center를 이용해서 지도의 위치를 변경
+          // lat은 위도 lng은 경도
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 8
+        });
+      }
+    </script>
+    <!-- 지도 style -->
     <style>
-        /* Always set the map height explicitly to define the size of the div
-        * element that contains the map. */
+      /* Always set the map height explicitly to define the size of the div
+      * element that contains the map. */
       #map {
         height: 100%;
       }
@@ -16,76 +37,29 @@
         margin: 0;
         padding: 0;
       }
-      
-      /* 지도 위의 모든 태그들을 감싼 div */
-      #content{
-        position: absolute;
-        z-index: 2;
-        top: 0px;
-        left: 0px;
-      }
-
-      form{
-        display: inline;
-        width: 75%;
-      }
-
-      /* 검색 창 div */
-      .search{
-        width: 274px;
-        height: 50px;
-        border-radius: 25px;
-        background-color: #ffffff;
-        position: absolute;
-        top: 80px;
-        left: 45px;
-        display: flex;
-        align-items: center;
-        box-shadow: 0px 0px 10px gray;
-      }
-
-      /* 검색하는 input */
-      input{
-        border: 0px;
-        height: 40px;
-        width: 100%;
-      }
-
-      input:focus {
-        outline:none;
-      }
-
-      /* 검색 창의 이미지 */
-      .map_flag{
-        margin-left: 10px;
-        margin-right: 10px;
-        width: 8%
-      }
     </style>
   </head>
   <body>
-  
-    <div id="map" style = "z-index: 1;"></div>
-    <div id="content">
-      <div class="search">
-        <img src="./img/maps_flags.png" class="map_flag" width="30px">
-        <form action="">
-          <input type="text"></input>
-        </form>
-      </div>
-    </div>
-	
+      <div id="map" style = "z-index: 1;"></div>
+      <?php
+      //  if($_GET['menu']){
+      //   $menu = $_GET['menu'];
+      //   include_once($menu.".php");
+      //  }else{
+      //    include_once('main.php');
+      //  }
+
+      include_once('main.php');
+      include_once('board.php');
+      include_once('shop.php');
+      ?>
+
     <script>
-      var map;
-      function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-          // center를 이용해서 지도의 위치를 변경
-          center: {lat: -34.397, lng: 150.644},
-          zoom: 8
-        });
-      }
+      // $('.menuli1').click(function(){
+      //   menuclick = 'board';
+      // });
     </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBW8KU767TtEUPCktqpmGBffaeZKjwSTuw&callback=initMap"
-    async defer></script>
+    <script src="javascript/index.js"></script>
+    <script src="javascript/menu.js"></script>
   </body>
 </html>
