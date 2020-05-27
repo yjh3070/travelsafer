@@ -1,13 +1,13 @@
 $('#menuBtn').click(function(){
-    if($('ul a').hasClass('open')){
+    if($('.menuli,button').hasClass('open')){
         setTimeout(() => {
-            $('ul a').removeClass('open');
+            $('.menuli,button').removeClass('open');
         }, 200);
-        $('html,#menu, #menuBtn').removeClass('open');
+        $('html,.menubar, #menuBtn').removeClass('open');
     }
     else{
-        $('ul a,html').addClass("open");
-        $('#menu').addClass("open");
+        $('.menuli,html,button').addClass("open");
+        $('.menubar').addClass("open");
         $('#menuBtn').addClass("open");
     }
 });

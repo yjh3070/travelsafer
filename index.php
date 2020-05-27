@@ -1,3 +1,6 @@
+<?php
+  $menuclick = '';
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -37,25 +40,26 @@
     </style>
   </head>
   <body>
-  
-    <div id="map" style = "z-index: 1;"></div>
-    <div id="content">
-      <div class="search">
-        <img src="./img/maps_flags.png" class="map_flag" width="30px">
-        <form action="">
-          <input type="text"></input>
-        </form>
-      </div>
-      <div id="menu">
-        <ul>
-            <li id="menuBtn"><img src="img/menu.svg" alt=""></li>
-            <a href="" id="ali"><li><img src="img/ticket.svg" alt=""></li></a>
-            <a href=""><li><img src="img/online.svg" alt=""></li></a>
-            <a href=""><li><img src="img/man-avatar.svg" alt=""></li></a>
-        </ul>
-      </div>
-    </div>
-	
+      <div id="map" style = "z-index: 1;"></div>
+      <?php
+      //  if($_GET['menu']){
+      //   $menu = $_GET['menu'];
+      //   include_once($menu.".php");
+      //  }else{
+      //    include_once('main.php');
+      //  }
+
+      include_once('main.php');
+      include_once('board.php');
+      include_once('shop.php');
+      ?>
+
+    <script>
+      // $('.menuli1').click(function(){
+      //   menuclick = 'board';
+      // });
+    </script>
+    <script src="javascript/index.js"></script>
     <script src="javascript/menu.js"></script>
   </body>
 </html>

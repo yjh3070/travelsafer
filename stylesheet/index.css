@@ -1,111 +1,22 @@
-/* 지도 위의 모든 태그들을 감싼 div */
-#content{
-  position: absolute;
-  z-index: 2;
-  top: 0px;
-  left: 0px;
+#board.open{
+    visibility: hidden;
 }
 
-
-/* 검색 창 div */
-.search{
-  width: 274px;
-  height: 50px;
-  border-radius: 25px;
-  background-color: #ffffff;
-  position: absolute;
-  top: 80px;
-  left: 45px;
-  display: flex;
-  align-items: center;
-  box-shadow: 0 0 20px 0 gray;
+#shop.open{
+    visibility: hidden;
 }
 
-/* 검색하는 input */
-input{
-  border: 0px;
-  height: 40px;
-  width: 100%;
-  font-size: 50px;
-}
-
-input:focus {
-  outline:none;
-}
-
-/* 검색 창의 이미지 */
-.map_flag{
-  margin-left: 10px;
-  margin-right: 10px;
-  width: 8%
-}
-
-form{
-  display: inline-block;
-  width: 75%;
-}
-
-
-/* 메뉴 바 div */
-#menu{
-  width: 59.3px;
-  height: 223.5px;
-  border-radius: 19px;
-  box-shadow: 0 0 20px 0 gray;
-  background-color: #ffffff;
-  position: absolute;
-  top: 150px;
-  left: 45px;
-  transition: height 0.5s ease;
-  -webkit-transition: height 0.5s ease; 
-  -moz-transition: height 0.5s ease; 
-  -o-transition: height 0.5s ease;
-}
-
-#menu.open{
-  width: 59.3px;
-  height: 59.3px;
-  border-radius: 19px;
-  box-shadow: 0 0 20px 0 gray;
-  background-color: #ffffff;
-  position: absolute;
-  top: 150px;
-  left: 45px;
-}
-
-ul{
-  padding: 0px;
-  margin: 0px;
-  list-style: none;
-  height: 80%;
-  display: flex;
-  justify-content:space-between;
-  flex-direction: column;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+#main.open{
+    visibility: hidden;
 }
 
 li{
-  width: 100%;
+    cursor: pointer;
 }
 
-img {
-  display: block;
-  margin: 0px auto;
-}
-
-#menuBtn{
-  cursor: pointer;
-}
-
-#menuBtn.open{
-  position: absolute;
-  top: 50%;
-  margin-top: -40%;
-}
-
-a.open{
-    visibility: hidden;
+button{
+    border: 0;
+    outline: 0;
+    background-color: #ffffff;
+    cursor: pointer;
 }
