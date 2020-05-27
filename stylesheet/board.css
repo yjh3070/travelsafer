@@ -12,7 +12,7 @@
 
 .menu{
     width: 59px;
-    height: 210px;
+    height: 250px;
     position: absolute;
     top: 20px;
     left: 20px;
@@ -41,6 +41,8 @@
 .menu-img {
     display: block;
     margin: auto;
+    width: 30px;
+    margin-top: 10px;
 }
 
 .travelsafer{
