@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        let cnt = 0;
+        let form = document.getElementById('form');
+        function readURL(input){
+            let img = document.createElement('img');
+            document.getElementById('divimg').appendChild(img);
+            let reader = new FileReader();
+            console.log(input.target.files[0].name);
+            reader.onload = function(e){
+                cnt++;
+                // let name = 'img'+cnt;
+                let result = e.target.result;
+
+                img.setAttribute('id', cnt);
+                img.setAttribute('src', result);
+
+                let hiddenField = document.createElement('input');
+                hiddenField.setAttribute('type', 'hidden');
+                hiddenField.setAttribute('name', 'name');
+                hiddenField.setAttribute('value', input.target.files[0].name);
+                document.getElementById('imgform').appendChild(hiddenField);
+
+                console.log(cnt);
+                console.log(input.target.files[0]);                                                                                                       
+            }
+            reader.readAsDataURL(input.target.files[0]);
+        }
+        function hiddendiv(){
+            let hiddenField1 = document.createElement('input');
+            hiddenField1.setAttribute('type', 'hidden');
+            hiddenField1.setAttribute('name', 'div');
+            hiddenField1.setAttribute('value', $('div').text());
+
+            let hiddenField2 = document.createElement('input');
+            hiddenField2.setAttribute('type', 'hidden');
+            hiddenField2.setAttribute('name', 'cnt');
+            hiddenField2.setAttribute('value', String(cnt));
+            hiddenField2.setAttribute('id', 'cnt');
+
+            document.getElementById('imgform').appendChild(hiddenField1);
+            document.getElementById('imgform').appendChild(hiddenField2);
+
+            console.log(document.getElementById('cnt').getAttribute('value'));
+            console.log("asdf "+document.getElementById('imgform').lastElementChild.getAttribute('value'));
+            console.log(cnt);
+        }
+    </script>
+</head>
+<body>
+    
+    <div contenteditable="true" id="divimg">
+    </div>
+    <form action='/test' method="post" onsubmit="hiddendiv();" id="imgform" name="imgform">
+        <input type="file" name="img" id="imgup" onchange="readURL(event);">
+        <input type="submit" value="파일 저장">
+    </form>
+</body>
+</html>
