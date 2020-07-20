@@ -28,6 +28,19 @@ app.get('/', function(req, res){
     res.render('index');
 });
 
+app.get('/conn', function(req, res){
+    sql = "select * from country;";
+    conn.query(sql, function(err, results){
+        if(err){
+            console.log(err);
+            res.send('select 실패');
+        }else{
+            res.send('select 성공');
+        }
+    });
+    // res.send('');
+});
+
 app.get('/signup', function(req, res){
     res.render('signup');
 })
@@ -77,7 +90,8 @@ app.post('/post', function(req, res){
                 res.send('게시물 작성 실패');
             }
             else
-                res.send('게시물 작성 성공');
+                res.render('postS');
+                // res.send('게시물 작성 성공');
         })
     }
     
@@ -92,6 +106,21 @@ app.get('/board', function(req, res){
         }
         else{
             res.render('board', {
+                results: results
+            });
+        }
+    });
+});
+
+app.get('/view', function(req, res){
+    page = req.query.page;
+    sql = "select post_title, post_cus, DATE_FORMAT(post_date, '%Y-%m-%d') as post_date,DATE_FORMAT(post_travel_date, '%Y-%m-%d') as post_travel_date, post_cont from post where postId=?";
+    conn.query(sql, [page], function(err, results){
+        if(err){
+            res.send('게시물 불러오기 실패');
+        }
+        else{
+            res.render('view', {
                 results: results
             });
         }
@@ -117,7 +146,13 @@ app.post('/test', function(req, res){
 });
 */
 
+// let hostname = '10.128.0.14';
+// let hostname = '35.223.37.46';
 
-app.listen(3030, function(){
+// app.listen(3030, hostname, function(){
+//     console.log('포트 3030 실행중!');
+// });
+
+app.listen(8080, function(){
     console.log('포트 3030 실행중!');
 });

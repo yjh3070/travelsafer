@@ -15,13 +15,17 @@
         <%
             for(var i = 0; i < Object.keys(results).length; i++){%>
             <tr>
-                <td><%=results[i].post_title%></td>
-                <td><%=results[i].post_coun%></td>
-                <td><%=results[i].post_date%></td>
+                
+                    <td><%=results[i].post_title%></td>
+                    <td><%=results[i].post_coun%></td>
+                    <td><%=results[i].post_date%></td>
+                    <td><a href="/view?page=<%=Object.keys(results).length-i%>">게시물 보기</a></td>
+                
            </tr>
         <%
             }
         %>
+        <a href="/">돌아가기</a>
     </table>
 </body>
 </html>

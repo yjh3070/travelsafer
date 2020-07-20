@@ -1,6 +1,8 @@
 let pbkfd2Password = require('pbkdf2-password');
 let hasher = pbkfd2Password();
 
+let conn = require('./dbConfig');
+
 exports.signup = function(req, res){
     let id = req.body.cusId;
     let pw = req.body.cus_pass;
@@ -45,8 +47,10 @@ exports.login = function(req, res){
 
         hasher({password: pw, salt: user.cus_salt}, (err, pass, salt, hash) => {
             if(hash === user.cus_pass){
-                req.session.user=id;
-                res.send('로그인 성공');
+                req.session.user = id;
+                console.log(req.session.user);
+                // res.send('로그인 성공');
+                res.render('loginS');
             }
             else{
                 res.send('아이디 또는 비밀번호를 확인하세요');
