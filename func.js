@@ -8,10 +8,11 @@ exports.signup = function(req, res){
     let pw = req.body.cus_pass;
     let pw_check = req.body.cus_pass_check;
     let name = req.body.cus_name;
-    let address = req.body.cus_add+" "+req.body.cus_add2;
+    let address = req.body.cus_add;
+    let address2 = req.body.cus_add2;
     let postalCode = req.body.cus_postalCode;
     let phone = req.body.cus_phone;
-    let year = Number(req.body.cus_year);
+    let birthday = req.body.birthday;
     let sex = Number(req.body.cus_sex);
     let saltdb = '';
 
@@ -23,8 +24,8 @@ exports.signup = function(req, res){
         pw = hash;
     });
 
-    let sql = 'INSERT INTO customer VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)';
-    setTimeout(() => {conn.query(sql, [id, name, pw, saltdb, address, postalCode, phone, year, sex], function(err, results) {
+    let sql = 'INSERT INTO customer VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)';
+    setTimeout(() => {conn.query(sql, [id, name, pw, saltdb, address, address2, postalCode, phone, birthday, sex], function(err, results) {
         if(err){
             res.send('회원가입 실패');
             console.log(err);
