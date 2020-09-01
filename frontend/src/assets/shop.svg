@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="25.511" height="39.832" viewBox="0 0 25.511 39.832">
+  <g id="그룹_240" data-name="그룹 240" transform="translate(-71 -231.168)">
+    <text id="shop" transform="translate(84 269)" fill="#707070" font-size="8" font-family="KoreanGD14-R, KoreanGD14R"><tspan x="-8.744" y="0">shop</tspan></text>
+    <path id="shopping-bag" d="M25.506,28.507,23.265,7.173a.877.877,0,0,0-.873-.786H18.182v-.96a5.427,5.427,0,0,0-10.855,0v.96H3.117a.877.877,0,0,0-.873.786L0,28.507a.877.877,0,0,0,.873.969H24.633a.877.877,0,0,0,.873-.969ZM9.082,5.428a3.673,3.673,0,0,1,7.346,0v.96H9.082ZM1.851,27.721,3.907,8.142H7.328v1.933a.877.877,0,0,0,1.754,0V8.142h7.346v1.933a.877.877,0,0,0,1.754,0V8.142H21.6l2.056,19.579Zm0,0" transform="translate(71 231.167)" fill="#707070"/>
+    <text id="_" data-name="\" transform="translate(84 255)" fill="#707070" font-size="12" font-family="BRR, BR"><tspan x="-5.628" y="0">\</tspan></text>
+  </g>
+</svg>

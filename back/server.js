@@ -6,7 +6,7 @@ let crypto = require('crypto');
 let sessionParser = require('express-session');
 let multer = require('multer');
 
-let func = require('./func');
+let func = require('../backend/func');
 
 let app = express();
 
@@ -23,6 +23,8 @@ app.use(sessionParser({
         maxAge: 24000 * 60 * 60 // 쿠키 유효기간 24시간
     }
 }))
+
+app.use(require('connect-history-api-fallback')());
 
 app.get('/', function(req, res){
     res.render('index');
@@ -77,9 +79,14 @@ app.post('/post', function(req, res){
 
     let sql = "select max(postId) as maxid from post;";
     conn.query(sql, function(err, results){
-        id = results[0].maxid + 1;
-        console.log(id);
-        post_insert();
+        if(err){
+            console.log(err);
+            res.send('게시물 작성 실패');
+        }else{
+            id = results[0].maxid + 1;
+            console.log(id);
+            post_insert();
+        }
     })
 
     function post_insert(){

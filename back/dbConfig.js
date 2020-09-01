@@ -1,8 +1,8 @@
 let mysql = require('mysql');
 
 let conn = mysql.createPool({
-    host: '35.239.42.162',
-    port: 3306,
+    host: 'localhost',
+    port: 3307,
     // socketPath: './cloudsql/travelsafer:us-central1:travelsafer',
     user: 'root',
     password: '12345678',

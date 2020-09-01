@@ -1,7 +1,7 @@
 let pbkfd2Password = require('pbkdf2-password');
 let hasher = pbkfd2Password();
 
-let conn = require('./dbConfig');
+let conn = require('../backend/dbConfig');
 
 exports.signup = function(req, res){
     let id = req.body.cusId;
@@ -31,7 +31,8 @@ exports.signup = function(req, res){
             console.log(err);
         }
         else{
-            res.send('회원가입 성공');}
+            res.render('signupS');
+        }
     })}, 1000);
 }
 
@@ -50,7 +51,6 @@ exports.login = function(req, res){
             if(hash === user.cus_pass){
                 req.session.user = id;
                 console.log(req.session.user);
-                // res.send('로그인 성공');
                 res.render('loginS');
             }
             else{

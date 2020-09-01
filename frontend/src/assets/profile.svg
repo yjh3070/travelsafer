@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="26.312" height="36" viewBox="0 0 26.312 36">
+  <g id="그룹_239" data-name="그룹 239" transform="translate(-71 -288)">
+    <text id="profile" transform="translate(84 322)" fill="#707070" font-size="8" font-family="KoreanGD14-R, KoreanGD14R"><tspan x="-12.112" y="0">profile</tspan></text>
+    <g id="user" transform="translate(71 288)">
+      <g id="그룹_232" data-name="그룹 232" transform="translate(0)">
+        <path id="패스_182" data-name="패스 182" d="M22.459,17.009a13.106,13.106,0,0,0-5-3.136,7.606,7.606,0,1,0-8.607,0A13.177,13.177,0,0,0,0,26.312H2.056a11.1,11.1,0,1,1,22.2,0h2.056A13.07,13.07,0,0,0,22.459,17.009Zm-9.3-3.853a5.55,5.55,0,1,1,5.55-5.55A5.556,5.556,0,0,1,13.156,13.156Z" transform="translate(0)" fill="#707070"/>
+      </g>
+    </g>
+  </g>
+</svg>

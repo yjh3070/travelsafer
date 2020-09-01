@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="33.225" height="34.05" viewBox="0 0 33.225 34.05">
+  <g id="그룹_241" data-name="그룹 241" transform="translate(-67.65 -183.95)">
+    <g id="sale" transform="translate(68 138.348)">
+      <g id="그룹_226" data-name="그룹 226" transform="translate(13.748 46.502)">
+        <path id="패스_174" data-name="패스 174" d="M220.139,45.931v6.62H226.7v6.837h4.885l3.825,2.105.215-2.105h2.744V45.931Z" transform="translate(-220.139 -45.931)" fill="none" stroke="#707070" stroke-linejoin="round" stroke-width="1.8"/>
+      </g>
+      <g id="그룹_227" data-name="그룹 227" transform="translate(0 52.723)">
+        <path id="패스_175" data-name="패스 175" d="M20.306,151.618H.625a.585.585,0,0,0-.625.536v13.6a.585.585,0,0,0,.625.536H3.68l.141,1.674a.544.544,0,0,0,.357.446.711.711,0,0,0,.266.051.7.7,0,0,0,.362-.1L8.2,166.293H20.306a.585.585,0,0,0,.625-.536v-13.6A.585.585,0,0,0,20.306,151.618Zm-.625,13.6H8a.7.7,0,0,0-.362.1l-2.65,1.618-.1-1.22a.593.593,0,0,0-.623-.5H1.249V152.689H19.681Z" transform="translate(0 -151.618)" fill="#707070" stroke="#707070" stroke-width="0.7"/>
+      </g>
+    </g>
+    <text id="board" transform="translate(84 216)" fill="#707070" font-size="8" font-family="KoreanGD14-R, KoreanGD14R"><tspan x="-10.46" y="0">board</tspan></text>
+  </g>
+</svg>
