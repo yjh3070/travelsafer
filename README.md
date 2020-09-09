@@ -5,3 +5,8 @@
 frontend : HTML/CSS, Javascript, Vue.js <br>
 backend : Node.js <br>
 Database : MySql
+
+
+yjh : 유정화
+heejung : 유희정
+dahui : 임다희
