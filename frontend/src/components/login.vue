@@ -1,7 +1,7 @@
 <template>
   <div id="login">
     <div id="wrapper">
-  <b-button v-b-toggle.collapse-1 class="btn-box">LOG IN</b-button>
+    <b-button v-b-toggle.collapse-1 class="btn-box" v-if="btn_show">LOG IN</b-button>
   </div>
   <b-collapse id="collapse-1" class="mt-2">
       <template>
@@ -19,6 +19,7 @@
                 type="text"
                 required
                 placeholder="아이디를 입력해 주세요."
+                value=""
               ></b-form-input>
             </b-form-group>
 
@@ -33,7 +34,7 @@
             </b-form-group>
             <p>아직 회원이 아니신가요?</p>
             <b-button type="submit" class="login-btn">LOG IN</b-button>
-            <b-button v-b-toggle.collapse-1 type="reset" variant="login-cancel" class="cancel">CANCEL</b-button>
+            <b-button v-b-toggle.collapse-1 type="reset" variant="login-cancel" class="cancel" @click="onReset">CANCEL</b-button>
           </b-form>
         </div>
       </template>
@@ -49,7 +50,8 @@ export default {
         userid: '',
         password: ''
       },
-      show: true
+      show: true,
+      btn_show: true
     }
   },
   methods: {
@@ -63,6 +65,7 @@ export default {
       this.$nextTick(() => {
         this.show = true
       })
+      console.log('onReset')
     }
   }
 }

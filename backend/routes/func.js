@@ -1,7 +1,7 @@
 let pbkfd2Password = require('pbkdf2-password');
 let hasher = pbkfd2Password();
 
-let conn = require('../backend/dbConfig');
+let conn = require('./dbConfig');
 
 exports.signup = function(req, res){
     let id = req.body.cusId;
@@ -58,4 +58,39 @@ exports.login = function(req, res){
             }
         });   
     })
+}
+
+exports.post = function(req, res){
+    let today = new Date();
+    let id, img;
+    let country = req.body.country;
+    let title = req.body.title;
+    let travel_date = req.body.travel_date;
+    let content = req.body.content;
+    let post_date = today.getFullYear() + "-" + (today.getMonth() + 1) + "-" + today.getDate();
+    let customer = req.session.user;
+
+    let sql = "select max(postId) as maxid from post;";
+    conn.query(sql, function(err, results){
+        if(err){
+            console.log(err);
+            res.send('게시물 작성 실패');
+        }else{
+            id = results[0].maxid + 1;
+            console.log(id);
+            post_insert();
+        }
+    })
+
+    function post_insert(){
+        let sql = "insert into post values(?, ?, ?, ?, ?, ?, ?, ?)";
+        conn.query(sql, [id, customer, country, title, img, travel_date, content, post_date], function(err, results){
+            if(err){
+                console.log(err);
+                res.send('게시물 작성 실패');
+            }
+            else
+                res.render('postS');
+        })
+    }
 }

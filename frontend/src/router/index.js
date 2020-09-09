@@ -1,20 +1,16 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import map from '@/components/map'
-import login from '@/components/login'
+// import login from '@/components/login'
+// import map from '@/components/map'
 
 Vue.use(Router)
 
 export default new Router({
-  routes: [
-    {
-      path: '/',
-      name: 'map',
-      component: map
-    }, {
-      path: '/login',
-      name: 'login',
-      component: login
-    }
-  ]
+  // routes: [
+  //   {
+  //     path: '/',
+  //     name: 'login',
+  //     component: login
+  //   }
+  // ]
 })

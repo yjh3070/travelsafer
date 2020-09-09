@@ -1,7 +1,7 @@
 <template>
   <div class="search-box">
       <img src="../assets/flag.svg" alt="">
-      <input class="search" type="text">
+      <input class="search-text" type="text">
   </div>
 </template>
 
@@ -19,9 +19,8 @@ export default {
         box-shadow: 0px 0px 15px 0px rgb(0 0 0 / 30%);
         display: inline-block;
         width: 250px;
-
     }
-    input.search:focus{
+    input.search-text:focus{
         border: none !important;
         box-shadow: none !important;
     }
