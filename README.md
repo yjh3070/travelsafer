@@ -4,7 +4,9 @@
 
 frontend : HTML/CSS, Javascript, Vue.js <br>
 backend : Node.js <br>
-Database : MySql
+Database : MySql <br>
+Design : Adobe XD<br>
+<iframe width="1366" height="768" src="https://xd.adobe.com/embed/087dd061-a799-44f0-b188-92065b96a615-5d2e/" frameborder="0" allowfullscreen></iframe>
 <br><br>
 
 <img src="https://user-images.githubusercontent.com/48953703/92549653-bc82ed00-f294-11ea-9d04-0afdee38fd96.png"></img>
