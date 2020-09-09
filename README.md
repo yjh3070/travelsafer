@@ -7,6 +7,8 @@ backend : Node.js <br>
 Database : MySql
 <br><br>
 
+<img src="https://user-images.githubusercontent.com/48953703/92549653-bc82ed00-f294-11ea-9d04-0afdee38fd96.png"></img>
+
 yjh : 유정화<br>
 heejung : 유희정<br>
 dahui : 임다희
