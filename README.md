@@ -7,6 +7,6 @@ backend : Node.js <br>
 Database : MySql
 
 
-yjh : 유정화
-heejung : 유희정
+yjh : 유정화<br>
+heejung : 유희정<br>
 dahui : 임다희
