@@ -11,7 +11,7 @@ Travelsafer 기능<br>
 -지도와 마우스 커서를 이용한 간단한 정보 제공
 -나라 클릭으로 자세한 데이터들을 제공
 -연간 범죄율, 잦은 범죄 유형, 대처방안 등
--여행 후기 게시판을 통한 사용자들 간의 소통 가능
+-여행 후기 게시판을 통한 사용자들 간의 소통 가능<br><br>
 
 frontend : HTML/CSS, Javascript, Vue.js <br>
 backend : Node.js <br>
